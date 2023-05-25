@@ -19,8 +19,7 @@ namespace OnHoRoBo.BusinesLayer.Generic
             _context = context;
             this.dbSet = dbSet;
         }
-        https://www.youtube.com/watch?v=JEZJDmFGoRE&list=PLzHIrc5EQ2suc_b2lRkswHmsOmDH6CcCl&index=2
-            20:48
+
         public void Add(T entity)
         {
             throw new NotImplementedException();
