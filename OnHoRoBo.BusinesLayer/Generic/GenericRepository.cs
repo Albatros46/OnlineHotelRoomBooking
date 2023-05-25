@@ -14,11 +14,18 @@ namespace OnHoRoBo.BusinesLayer.Generic
         private readonly ApplicationDbContext _context;
         internal DbSet<T> dbSet;
 
+        public GenericRepository(ApplicationDbContext context)
+        {//UnitOfWork te kullanilmasi icin
+            Context = context;
+        }
+
         public GenericRepository(ApplicationDbContext context, DbSet<T> dbSet)
         {
             _context = context;
             this.dbSet = dbSet;
         }
+
+        public ApplicationDbContext Context { get; }
 
         public void Add(T entity)
         {
